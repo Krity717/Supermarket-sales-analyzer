@@ -1,48 +1,37 @@
 from src.data_loader import load_data
+from src.preprocess import preprocess_data
 
 
 df = load_data()
 
-print("First 5 rows:")
-print(df.head())
-
-print("\nShape:")
-print(df.shape)
-
-print("\nColumns:")
-print(df.columns.tolist())
-
-print("\nData types:")
+print("Before preprocessing:")
 print(df.dtypes)
 
-print("\nMissing values:")
+df = preprocess_data(df)
+
+print("\nAfter preprocessing:")
+print(df.dtypes)
+
+print("\nFirst 5 dates:")
+print(df["date"].head())
+
+print("\nProcessed columns:")
+print(df.columns.tolist())
+
+print("\nProcessed data:")
+print(df[["date", "time", "month", "day", "day_of_week", "hour"]].head())
+
+print("\nMissing values after preprocessing:")
 print(df.isnull().sum())
 
-print("\nDuplicate rows:")
+print("\nDuplicate rows after preprocessing:")
 print(df.duplicated().sum())
 
-print("\nStatistical summary:")
-print(df.describe())
+print("\nHour range:")
+print(df["hour"].min(), "to", df["hour"].max())
 
-print("\nUnique values:")
+print("\nMonth values:")
+print(df["month"].unique())
 
-print("\nBranches:")
-print(df["branch"].unique())
-
-print("\nCities:")
-print(df["city"].unique())
-
-print("\nCustomer types:")
-print(df["customer_type"].unique())
-
-print("\nGender:")
-print(df["gender_customer"].unique())
-
-print("\nProduct lines:")
-print(df["product_line"].unique())
-
-print("\nPayment methods:")
-print(df["payment_method"].unique())
-
-print("\nDate range:")
-print(df["date"].min(), "to", df["date"].max())
+print("\nDay of week values:")
+print(df["day_of_week"].unique())
