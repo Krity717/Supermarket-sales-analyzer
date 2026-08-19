@@ -1,37 +1,55 @@
 from src.data_loader import load_data
 from src.preprocess import preprocess_data
+from src.analysis import (
+    calculate_revenue_metrics,
+    revenue_by_branch,
+    revenue_by_product_line,
+    revenue_by_customer_type,
+    revenue_by_gender,
+    revenue_by_payment_method,
+    revenue_by_month,
+    revenue_by_day_of_week,
+    revenue_by_hour,
+    average_rating_by_branch,
+    average_rating_by_product_line
+)
 
 
 df = load_data()
-
-print("Before preprocessing:")
-print(df.dtypes)
-
 df = preprocess_data(df)
 
-print("\nAfter preprocessing:")
-print(df.dtypes)
+metrics = calculate_revenue_metrics(df)
 
-print("\nFirst 5 dates:")
-print(df["date"].head())
+print("Revenue Metrics:")
+print(f"Total Revenue: {metrics['total_revenue']:.2f}")
+print(f"Average Revenue: {metrics['average_revenue']:.2f}")
 
-print("\nProcessed columns:")
-print(df.columns.tolist())
+print("\nRevenue by Branch:")
+print(revenue_by_branch(df))
 
-print("\nProcessed data:")
-print(df[["date", "time", "month", "day", "day_of_week", "hour"]].head())
+print("\nRevenue by Product Line:")
+print(revenue_by_product_line(df))
 
-print("\nMissing values after preprocessing:")
-print(df.isnull().sum())
+print("\nRevenue by Customer Type:")
+print(revenue_by_customer_type(df))
 
-print("\nDuplicate rows after preprocessing:")
-print(df.duplicated().sum())
+print("\nRevenue by Gender:")
+print(revenue_by_gender(df))
 
-print("\nHour range:")
-print(df["hour"].min(), "to", df["hour"].max())
+print("\nRevenue by Payment Method:")
+print(revenue_by_payment_method(df))
 
-print("\nMonth values:")
-print(df["month"].unique())
+print("\nRevenue by Month")
+print(revenue_by_month(df))
 
-print("\nDay of week values:")
-print(df["day_of_week"].unique())
+print("\nRevenue by Day of Week:")
+print(revenue_by_day_of_week(df))
+
+print("\nRevenue by Hour:")
+print(revenue_by_hour(df))
+
+print("\nAverage Rating by Branch:")
+print(average_rating_by_branch(df))
+
+print("\nAverage Rating by Product Line:")
+print(average_rating_by_product_line(df))
