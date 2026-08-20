@@ -6,7 +6,7 @@ def plot_revenue_by_branch(branch_revenue):
 
     plt.figure(figsize=(8, 5))
 
-    branch_revenue.plot(kind="bar", color="teal")
+    branch_revenue.plot(kind="bar", color="gray")
 
     plt.title("Revenue by Branch")
     plt.xlabel("Branch")
@@ -21,7 +21,7 @@ def plot_revenue_by_product_line(product_line_revenue):
 
     plt.figure(figsize=(10, 6))
 
-    product_line_revenue.plot(kind="barh", color=["seagreen", "teal"])
+    product_line_revenue.plot(kind="barh", color="gray")
 
     plt.title("Revenue by Product Line")
     plt.xlabel("Revenue")
@@ -38,7 +38,7 @@ def plot_revenue_by_customer_type(customer_type_revenue):
 
     customer_type_revenue.plot(
         kind="bar",
-        color="olive"
+        color=["skyblue", "gray"]
     )
 
     plt.title("Revenue by Customer Type")
@@ -74,7 +74,7 @@ def plot_revenue_by_payment_method(payment_revenue):
 
     payment_revenue.plot(
         kind="bar",
-        color=["brown", "black", "maroon"]
+        color=["gray", "black", "pink"]
     )
 
     plt.title("Revenue by Payment Method")
@@ -92,7 +92,7 @@ def plot_revenue_by_month(month_revenue):
 
     month_revenue.plot(
         kind="bar",
-        color="green"
+        color=["gray", "pink", "black"]
     )
 
     plt.title("Revenue by Month")
@@ -110,7 +110,7 @@ def plot_revenue_by_day(revenue_by_day):
 
     revenue_by_day.plot(
         kind="bar",
-        color="red"
+        color="gray"
     )
 
     plt.title("Revenue by Day of Week")
@@ -146,7 +146,7 @@ def plot_rating_by_branch(branch_rating):
 
     branch_rating.plot(
         kind="bar",
-        color="purple"
+        color="mediumpurple"
     )
 
     plt.title("Average Rating by Branch")
@@ -164,7 +164,7 @@ def plot_rating_by_product(product_rating):
 
     product_rating.plot(
         kind="barh",
-        color="teal"
+        color="gray"
     )
 
     plt.title("Average Rating by Product Line")
