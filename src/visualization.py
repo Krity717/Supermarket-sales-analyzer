@@ -84,3 +84,93 @@ def plot_revenue_by_payment_method(payment_revenue):
     plt.tight_layout()
     plt.savefig("images/revenue_by_payment_method.png")
     plt.show()
+
+def plot_revenue_by_month(month_revenue):
+    """Create a bar chart of revenue by month."""
+
+    plt.figure(figsize=(8, 5))
+
+    month_revenue.plot(
+        kind="bar",
+        color="green"
+    )
+
+    plt.title("Revenue by Month")
+    plt.xlabel("Month")
+    plt.ylabel("Revenue")
+
+    plt.tight_layout()
+    plt.savefig("images/revenue_by_month.png")
+    plt.show()
+
+def plot_revenue_by_day(revenue_by_day):
+    """Create a bar chart of revenue by day of week."""
+
+    plt.figure(figsize=(8, 5))
+
+    revenue_by_day.plot(
+        kind="bar",
+        color="red"
+    )
+
+    plt.title("Revenue by Day of Week")
+    plt.xlabel("Day of Week")
+    plt.ylabel("Revenue")
+
+    plt.tight_layout()
+    plt.savefig("images/revenue_by_day.png")
+    plt.show()
+
+def plot_revenue_by_hour(hour_revenue):
+    """Create a bar chart of revenue by hour."""
+
+    plt.figure(figsize=(10, 5))
+
+    hour_revenue.plot(
+        kind="bar",
+        color="gray"
+    )
+
+    plt.title("Revenue by Hour")
+    plt.xlabel("Hour")
+    plt.ylabel("Revenue")
+
+    plt.tight_layout()
+    plt.savefig("images/revenue_by_hour.png")
+    plt.show()
+
+def plot_rating_by_branch(branch_rating):
+    """Create a bar chart of average rating by branch."""
+
+    plt.figure(figsize=(8, 5))
+
+    branch_rating.plot(
+        kind="bar",
+        color="purple"
+    )
+
+    plt.title("Average Rating by Branch")
+    plt.xlabel("Branch")
+    plt.ylabel("Average Rating")
+
+    plt.tight_layout()
+    plt.savefig("images/rating_by_branch.png")
+    plt.show()
+
+def plot_rating_by_product(product_rating):
+    """Create a bar chart of average rating by product line."""
+
+    plt.figure(figsize=(10, 6))
+
+    product_rating.plot(
+        kind="barh",
+        color="teal"
+    )
+
+    plt.title("Average Rating by Product Line")
+    plt.xlabel("Average Rating")
+    plt.ylabel("Product Line")
+
+    plt.tight_layout()
+    plt.savefig("images/rating_by_product.png")
+    plt.show()
