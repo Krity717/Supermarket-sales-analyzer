@@ -53,3 +53,21 @@ print(average_rating_by_branch(df))
 
 print("\nAverage Rating by Product Line:")
 print(average_rating_by_product_line(df))
+
+# Basic tests
+assert len(df) > 0
+assert metrics["total_revenue"] > 0
+assert metrics["average_revenue"] > 0
+
+assert len(revenue_by_branch(df)) > 0
+assert len(revenue_by_product_line(df)) > 0
+assert len(revenue_by_customer_type(df)) > 0
+assert len(revenue_by_gender(df)) > 0
+assert len(revenue_by_payment_method(df)) > 0
+assert len(revenue_by_month(df)) > 0
+assert len(revenue_by_day_of_week(df)) > 0
+assert len(revenue_by_hour(df)) > 0
+assert len(average_rating_by_branch(df)) > 0
+assert len(average_rating_by_product_line(df)) > 0
+
+print("\nAll tests passed!")
