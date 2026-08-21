@@ -205,3 +205,19 @@ The analysis of the supermarket sales data produced the following insights:
 * **Hourly performance:** **7 PM (19:00)** had the highest revenue (**39,699.51**), while **8 PM (20:00)** had the lowest (**22,969.53**).
 * **Branch ratings:** Branch **C** had the highest average customer rating (**7.07**), while Branch B had the lowest (**6.82**).
 * **Product line ratings:** **Food and beverages** had the highest average rating (**7.11**), while **Home and lifestyle** had the lowest (**6.84**).
+
+## Future Improvements
+
+The project can be extended in the future by:
+
+- Adding more advanced statistical analysis.
+- Building an interactive dashboard using tools such as Plotly or Streamlit.
+- Adding predictive machine learning models for sales forecasting.
+- Exploring customer segmentation using unsupervised learning techniques.
+- Adding more automated tests for individual functions.
+
+## Conclusion
+
+The Supermarket Sales Analyzer demonstrates a complete data-analysis workflow using Python. The project covers data loading, preprocessing, analysis, visualization, and basic testing.
+
+The analysis provides insights into revenue patterns across branches, product lines, customer types, payment methods, time periods, and customer ratings. The project also provides a foundation for extending the analysis into interactive dashboards and machine learning applications.
